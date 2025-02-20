@@ -15,7 +15,6 @@ class Router
     {
         $method = strtoupper($method);
 
-        // Convert the route to a regex for dynamic parameters
         $route = preg_replace('/\{[a-zA-Z0-9_]+\}/', '([a-zA-Z0-9_]+)', $route);
 
         $this->routes[$method][$route] = $callback;
